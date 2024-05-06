@@ -1,13 +1,13 @@
 namespace LibraryManagement.Models
 {
-    public class DataSetSingleton
+    public class DataSingleton
     {
-        private static DataSetSingleton instance;
-        public static DataSetSingleton Instance
+        private static DataSingleton instance;
+        public static DataSingleton Instance
         {
             get
             {
-                if (instance == null) instance = new DataSetSingleton();
+                if (instance == null) instance = new DataSingleton();
                 return instance;
             }
             set
@@ -16,7 +16,7 @@ namespace LibraryManagement.Models
             }
         }
         public LibraryEntities DB { get; set; }
-        private DataSetSingleton()
+        private DataSingleton()
         {
             DB = new LibraryEntities();
         }

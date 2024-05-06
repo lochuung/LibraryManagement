@@ -78,7 +78,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="LoginScreen.xaml.cs">
+      <DependentUpon>LoginScreen.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Utils\CommonUtils.cs" />
+    <Compile Include="Utils\Converter\ImageToSource.cs" />
+    <Compile Include="Utils\Validations\LoginValidations\PasswordLoginValidation.cs" />
+    <Compile Include="Utils\Validations\LoginValidations\UserNameLoginValidation.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Page Include="DataContextDictionary.xaml" />
+    <Page Include="LoginScreen.xaml" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -105,7 +115,7 @@
     <Compile Include="Models\Category.cs">
       <DependentUpon>Library.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\DataSetSingleton.cs" />
+    <Compile Include="Models\DataSingleton.cs" />
     <Compile Include="Models\Library.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -204,10 +214,14 @@
     <None Include="Resources\icon.png" />
     <None Include="Resources\import-new.png" />
     <None Include="Resources\import-old.png" />
+    <Content Include="Scripts\add_data.sql" />
     <Content Include="Scripts\create_tables.sql" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.5.0.1-ci615\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.5.0.1-ci615\build\MaterialDesignThemes.targets')" />
