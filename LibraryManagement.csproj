@@ -81,12 +81,39 @@
     <Compile Include="LoginScreen.xaml.cs">
       <DependentUpon>LoginScreen.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Utils\BindingProxy.cs" />
     <Compile Include="Utils\CommonUtils.cs" />
     <Compile Include="Utils\Converter\ImageToSource.cs" />
+    <Compile Include="Utils\Validations\InfoValidations\ComfirmPasswordValidation.cs" />
+    <Compile Include="Utils\Validations\InfoValidations\PasswordValidation.cs" />
+    <Compile Include="Utils\Validations\InfoValidations\PhoneNumerValidation.cs" />
+    <Compile Include="Utils\Validations\InfoValidations\UserNameValidation.cs" />
     <Compile Include="Utils\Validations\LoginValidations\PasswordLoginValidation.cs" />
     <Compile Include="Utils\Validations\LoginValidations\UserNameLoginValidation.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\BookViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="Views\AuthorWindow.xaml.cs">
+      <DependentUpon>AuthorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BorrowBookWindow.xaml.cs">
+      <DependentUpon>BorrowBookWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CategoryWindow.xaml.cs">
+      <DependentUpon>CategoryWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ChangePasswordWindow.xaml.cs">
+      <DependentUpon>ChangePasswordWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CollectFineWindow.xaml.cs">
+      <DependentUpon>CollectFineWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HomeUC.xaml.cs">
+      <DependentUpon>HomeUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ReturnBookWindow.xaml.cs">
+      <DependentUpon>ReturnBookWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="DataContextDictionary.xaml" />
     <Page Include="LoginScreen.xaml" />
     <Page Include="MainWindow.xaml">
@@ -101,6 +128,13 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\AuthorWindow.xaml" />
+    <Page Include="Views\BorrowBookWindow.xaml" />
+    <Page Include="Views\CategoryWindow.xaml" />
+    <Page Include="Views\ChangePasswordWindow.xaml" />
+    <Page Include="Views\CollectFineWindow.xaml" />
+    <Page Include="Views\HomeUC.xaml" />
+    <Page Include="Views\ReturnBookWindow.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Author.cs">
@@ -219,9 +253,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.5.0.1-ci615\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.5.0.1-ci615\build\MaterialDesignThemes.targets')" />

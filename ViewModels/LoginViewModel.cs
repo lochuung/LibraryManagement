@@ -1,11 +1,13 @@
 using System;
 using System.Collections.ObjectModel;
 using System.Data.Common;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows;
 using LibraryManagement.Models;
+using LibraryManagement.Views;
 
 namespace LibraryManagement.ViewModels
 {
@@ -47,24 +49,24 @@ namespace LibraryManagement.ViewModels
             }
         }
 
-        private string _newPasswordStaff;
-        public string NewPasswordStaff
+        private string _newPassword;
+        public string NewPassword
         {
-            get => _newPasswordStaff;
+            get => _newPassword;
             set
             {
-                _newPasswordStaff = value;
+                _newPassword = value;
                 OnPropertyChanged();
             }
         }
 
-        private string _confirmPasswordStaff;
-        public string ConfirmPasswordStaff
+        private string _confirmPassword;
+        public string ConfirmPassword
         {
-            get => _confirmPasswordStaff;
+            get => _confirmPassword;
             set
             {
-                _confirmPasswordStaff = value; OnPropertyChanged();
+                _confirmPassword = value; OnPropertyChanged();
             }
         }
 
@@ -178,8 +180,8 @@ namespace LibraryManagement.ViewModels
                 return true;
             }, (p) =>
             {
-                // Window changePasswordWindow = new ChangePassword();
-                // changePasswordWindow.ShowDialog();
+                Window changePasswordWindow = new ChangePasswordWindow();
+                changePasswordWindow.ShowDialog();
             });
 
             LogoutCommand = new AppCommand<object>((p) =>
@@ -193,28 +195,33 @@ namespace LibraryManagement.ViewModels
 
             EditPasswordCommand = new AppCommand<object>((p) =>
             {
-                if (CurrentUser == null || Password == null || NewPasswordStaff == null || ConfirmPasswordStaff == null)
+                if (CurrentUser == null || Password == null || NewPassword == null || ConfirmPassword == null)
                     return false;
                 return true;
 
             }, (p) =>
             {
-                // var Staff = DataAdapter.Instance.DB.Staffs.Where(x => x.idStaff == CurrentStaff.idStaff).SingleOrDefault();
-                // if (EncryptSHA512Managed(Password) != CurrentStaff.passwordStaff)
-                // {
-                //     MessageBox.Show("Mật khẩu cũ không chính xác!", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
-                // }
-                // else if (NewPasswordStaff != ConfirmPasswordStaff)
-                // {
-                //     MessageBox.Show("Mật khẩu xác nhận không khớp!", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
-                // }
-                // else
-                // {
-                //     Staff.passwordStaff = EncryptSHA512Managed(NewPasswordStaff);
-                //     DataAdapter.Instance.DB.Staffs.AddOrUpdate(Staff);
-                //     DataAdapter.Instance.DB.SaveChanges();
-                //     MessageBox.Show("Bạn đã đổi mật khẩu thành công");
-                // }
+                var user = DataSingleton.Instance.DB.Users.FirstOrDefault(x => x.id == CurrentUser.id);
+                if (user == null)
+                {
+                    MessageBox.Show("Tài khoản không tồn tại");
+                    return;
+                }
+                if (user.password != EncryptSha512Managed(Password))
+                {
+                    MessageBox.Show("Mật khẩu cũ không chính xác!", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+                if (NewPassword != ConfirmPassword)
+                {
+                    MessageBox.Show("Mật khẩu xác nhận không khớp!", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+                
+                user.password = EncryptSha512Managed(NewPassword);
+                DataSingleton.Instance.DB.Users.AddOrUpdate(user);
+                DataSingleton.Instance.DB.SaveChanges();
+                MessageBox.Show("Bạn đã đổi mật khẩu thành công");
             });
         }
 

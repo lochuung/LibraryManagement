@@ -104,12 +104,14 @@
                        Margin="20 0 0 10"
                        FontSize="15" FontWeight="Medium" FontStyle="Italic"/>
                 <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center" Orientation="Horizontal" Margin="5">
-                    <Button x:Name="btnLogout" VerticalAlignment="Center" Margin="0 0 5 10" Padding="10" Height="Auto" Background="Black" Command="{Binding LogoutCommand}">
+                    <Button 
+                        
+                        x:Name="btnLogout" VerticalAlignment="Center" Margin="0 0 5 10" Padding="10" Height="Auto" Background="Orchid" Command="{Binding LogoutCommand}">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="Đăng xuất" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                         </StackPanel>
                     </Button>
-                    <Button x:Name="btnChangePassword" VerticalAlignment="Center" Margin="5 0 0 10" Padding="10" Height="Auto" Background="Black" Command="{Binding ChangePasswordCommand}" Click="btnChangePassword_Click">
+                    <Button x:Name="btnChangePassword" VerticalAlignment="Center" Margin="5 0 0 10" Padding="10" Height="Auto" Background="Orchid" Command="{Binding ChangePasswordCommand}" Click="btnChangePassword_Click">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="Đổi mật khẩu" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                         </StackPanel>

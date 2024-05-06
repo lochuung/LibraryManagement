@@ -4,6 +4,7 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
+using LibraryManagement.Views;
 using static LibraryManagement.Utils.CommonUtils;
 
 namespace LibraryManagement
@@ -105,7 +106,7 @@ namespace LibraryManagement
             {
                 case "ItemHome":
                     this.lbTitle.Content = "QUẢN LÝ THƯ VIỆN";
-                    // urc = new HomeScreen();
+                    urc = new HomeUC();
                     gridForContent.Children.Add(urc);
                     HideNavigation();
                     break;

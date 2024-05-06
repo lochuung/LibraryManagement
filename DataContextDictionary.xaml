@@ -4,6 +4,7 @@
                     xmlns:converter="clr-namespace:LibraryManagement.Utils.Converter">
     <!-- ViewModel -->
     <viewmodel:LoginViewModel x:Key="LoginViewModel"/>
+    <viewmodel:BookViewModel x:Key="BookViewModel" />
     <!-- Value Converter -->
     <converter:ImageToSource x:Key="ImageToSource"/>
 </ResourceDictionary>
