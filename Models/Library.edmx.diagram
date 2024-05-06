@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2738608b181d4acb839e5e5e53accb23" Name="Diagram1" ZoomLevel="55">
+        <EntityTypeShape EntityType="libraryModel.Author" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.Book" Width="1.5" PointX="3" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.BookReader" Width="1.5" PointX="5.25" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.Category" Width="1.5" PointX="5.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.Payment" Width="1.5" PointX="5.25" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.Privilege" Width="1.5" PointX="7.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.Publisher" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.Reader" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.ReaderType" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.Role" Width="1.5" PointX="10" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.User" Width="1.5" PointX="12.25" PointY="2" IsExpanded="true" />
+        <AssociationConnector Association="libraryModel.FK_Book_publisher_id" ManuallyRouted="false" />
+        <AssociationConnector Association="libraryModel.FK_BookReader_book_id" ManuallyRouted="false" />
+        <AssociationConnector Association="libraryModel.FK_BookReader_reader_id" ManuallyRouted="false" />
+        <AssociationConnector Association="libraryModel.FK_Payment_reader_id" ManuallyRouted="false" />
+        <AssociationConnector Association="libraryModel.FK_Reader_reader_type_id" ManuallyRouted="false" />
+        <AssociationConnector Association="libraryModel.Book_Author" ManuallyRouted="false" />
+        <AssociationConnector Association="libraryModel.Book_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="libraryModel.Roles_Privileges" ManuallyRouted="false" />
+        <AssociationConnector Association="libraryModel.Users_Roles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
