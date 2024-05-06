@@ -103,15 +103,6 @@ CREATE TABLE ReaderType (
     PRIMARY KEY (id)
 );
 
-CREATE TABLE Payment (
-    id bigint NOT NULL IDENTITY,
-    amount decimal(19,2) DEFAULT 0.00,
-    payment_date datetime2(6) DEFAULT NULL,
-    reader_id bigint DEFAULT NULL,
-    PRIMARY KEY (id),
-    CONSTRAINT FK_Payment_reader_id FOREIGN KEY (reader_id) REFERENCES Reader (id)
-);
-
 CREATE TABLE Reader (
     id bigint NOT NULL IDENTITY,
     name varchar(255) DEFAULT NULL,
@@ -125,3 +116,11 @@ CREATE TABLE Reader (
     CONSTRAINT FK_Reader_reader_type_id FOREIGN KEY (reader_type_id) REFERENCES ReaderType (id)
 ) ;
 
+CREATE TABLE Payment (
+                         id bigint NOT NULL IDENTITY,
+                         amount decimal(19,2) DEFAULT 0.00,
+                         payment_date datetime2(6) DEFAULT NULL,
+                         reader_id bigint DEFAULT NULL,
+                         PRIMARY KEY (id),
+                         CONSTRAINT FK_Payment_reader_id FOREIGN KEY (reader_id) REFERENCES Reader (id)
+);
