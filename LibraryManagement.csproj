@@ -147,11 +147,19 @@
     <Compile Include="Utils\Validations\Info\UserNameValidation.cs" />
     <Compile Include="Utils\Validations\Login\PasswordLoginValidation.cs" />
     <Compile Include="Utils\Validations\Login\UserNameLoginValidation.cs" />
+    <Compile Include="ViewModels\AuthorViewModel.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\BookViewModel.cs" />
+    <Compile Include="ViewModels\CategoryViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="Views\AddAuthorWindow.xaml.cs">
+      <DependentUpon>AddAuthorWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\AddBookWindow.xaml.cs">
       <DependentUpon>AddBookWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddCategoryWindow.xaml.cs">
+      <DependentUpon>AddCategoryWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\AuthorWindow.xaml.cs">
       <DependentUpon>AuthorWindow.xaml</DependentUpon>
@@ -191,7 +199,9 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\AddAuthorWindow.xaml" />
     <Page Include="Views\AddBookWindow.xaml" />
+    <Page Include="Views\AddCategoryWindow.xaml" />
     <Page Include="Views\AuthorWindow.xaml" />
     <Page Include="Views\BookUC.xaml" />
     <Page Include="Views\BorrowBookWindow.xaml" />

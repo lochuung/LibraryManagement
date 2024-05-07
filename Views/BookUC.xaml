@@ -256,10 +256,15 @@
                     <Grid Grid.Column="1">
                         <StackPanel x:Name="operation" Orientation="Horizontal" HorizontalAlignment="Center">
                             <Button x:Name="btnCategory" Click="ButtonCategory_Click" ToolTip="Thay đổi danh sách thể loại" Background="Transparent" BorderThickness="0" Margin="10 0 0 0" Padding="0" VerticalAlignment="Center"  Grid.Column="0">
-                                <Image Source="/Assets/category.png"/>
+                                <StackPanel Orientation="Horizontal" Margin="3">
+                                    <materialDesign:PackIcon Kind="Category" Foreground="Black" Width="20" Height="20" VerticalAlignment="Center"/>
+                                    <TextBlock Text="Thể loại" Margin="5" Foreground="Black" VerticalAlignment="Center" FontSize="16" FontWeight="Bold"/>
+                                </StackPanel>
                             </Button>
-                            <Button x:Name="btnAuthors" Click="ButtonAuthor_Click" ToolTip="Thay đổi danh sách tác giả" Background="Transparent" BorderThickness="0" Margin="10 0 0 0" Padding="0" VerticalAlignment="Center"  Grid.Column="0">
-                                <Image Source="/Assets/author.png"/>
+                            <Button x:Name="btnAuthors" Click="ButtonAuthor_Click" ToolTip="Thay đổi danh sách tác giả" Background="Transparent" BorderThickness="0" Margin="10 0 0 0" Padding="0" VerticalAlignment="Center"  Grid.Column="0"><StackPanel Orientation="Horizontal" Margin="3">
+                                    <materialDesign:PackIcon Kind="User" Foreground="Black" Width="20" Height="20" VerticalAlignment="Center"/>
+                                    <TextBlock Text="Tác giả" Margin="5" Foreground="Black" VerticalAlignment="Center" FontSize="16" FontWeight="Bold"/>
+                                </StackPanel>
                             </Button>
                         </StackPanel>
                     </Grid>
