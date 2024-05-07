@@ -86,6 +86,9 @@
                                         <DataTemplate>
                                             <Grid>
                                                 <Button Width="15" Height="15" BorderBrush="{x:Null}" materialDesign:ShadowAssist.Darken="False" BorderThickness="0" Margin="0" Padding="0" ToolTip="Bỏ chọn thể loại" Background="#fff" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Command="{Binding Path=DataContext.UnSelectedCategoryCommand, RelativeSource={RelativeSource AncestorType={x:Type Window}, Mode=FindAncestor}}" CommandParameter="{Binding}">
+                                                    <StackPanel Orientation="Horizontal" Margin="5">
+                                                        <materialDesign:PackIcon Kind="Delete"  Width="20" Height="20" VerticalAlignment="Center"/>
+                                                    </StackPanel>
                                                 </Button>
                                             </Grid>
                                         </DataTemplate>
@@ -130,7 +133,9 @@
                                         <DataTemplate>
                                             <Grid>
                                                 <Button Width="15" Height="15" BorderBrush="{x:Null}" materialDesign:ShadowAssist.Darken="False" BorderThickness="0" Margin="0" Padding="0" ToolTip="Bỏ chọn tác giả" Background="#fff" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Command="{Binding Path=DataContext.UnSelectedAuthor, RelativeSource={RelativeSource AncestorType={x:Type Window}, Mode=FindAncestor}}" CommandParameter="{Binding}">
-                                                    <Image x:Name="AImage" Margin="0"/>
+                                                    <StackPanel Orientation="Horizontal" Margin="5">
+                                                        <materialDesign:PackIcon Kind="Delete"  Width="15" Height="15" VerticalAlignment="Center"/>
+                                                    </StackPanel>
                                                 </Button>
                                             </Grid>
                                         </DataTemplate>

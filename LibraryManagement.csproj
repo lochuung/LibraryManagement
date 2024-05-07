@@ -135,6 +135,7 @@
     <Compile Include="Utils\Paginations\BookPaginatingCollection.cs" />
     <Compile Include="Utils\Paginations\LatestBookPaginationCollection.cs" />
     <Compile Include="Utils\Paginations\PaginatingCollection.cs" />
+    <Compile Include="Utils\Paginations\ReaderPaginatingCollection.cs" />
     <Compile Include="Utils\Validations\Book\AuthorNameValidation.cs" />
     <Compile Include="Utils\Validations\Book\AuthorValidation.cs" />
     <Compile Include="Utils\Validations\Book\BookNameValidation.cs" />
@@ -150,6 +151,7 @@
     <Compile Include="ViewModels\AuthorViewModel.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\BookViewModel.cs" />
+    <Compile Include="ViewModels\BorrowBookViewModel.cs" />
     <Compile Include="ViewModels\CategoryViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="Views\AddAuthorWindow.xaml.cs">
@@ -277,6 +279,7 @@
     </Content>
     <Content Include="Scripts\add_categories_authors_publisher.sql" />
     <Content Include="Scripts\add_data.sql" />
+    <Content Include="Scripts\add_reader_data.sql" />
     <Content Include="Scripts\create_tables.sql" />
   </ItemGroup>
   <ItemGroup>

@@ -6,6 +6,7 @@
     <viewmodel:BookViewModel x:Key="BookViewModel" />
     <viewmodel:CategoryViewModel x:Key="CategoryViewModel" />
     <viewmodel:AuthorViewModel x:Key="AuthorViewModel" />
+    <viewmodel:BorrowBookViewModel x:Key="BorrowBookViewModel" />
     <viewmodel:SelectedItemToBoolean x:Key="SelectedItemToBoolean"/>
     
     <!-- Value Converter -->
