@@ -136,7 +136,7 @@ namespace LibraryManagement
                     break;
                 case "ItemStaff":
                     this.lbTitle.Content = "NHÂN VIÊN";
-                    // urc = new StaffScreen();
+                    urc = new UserUC();
                     gridForContent.Children.Add(urc);
                     HideNavigation();
                     break;

@@ -233,7 +233,7 @@ namespace LibraryManagement.ViewModels
                 try
                 {
                     ListDetailBorrowCorresponding = new ObservableCollection<BookReader>(ReaderSelected.BookReaders
-                        .Where(br => br.return_date == null && br.status == "đang mượn"));
+                        .Where(br => br.status == "đang mượn"));
                 }
                 catch(ArgumentNullException)
                 {

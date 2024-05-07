@@ -155,20 +155,6 @@
                                    FontSize="18" FontWeight="Bold"/>
                     </StackPanel>
                 </ListViewItem>
-                <ListViewItem x:Name="ItemReport" Height="60">
-                    <StackPanel Orientation="Horizontal">
-                        <materialDesign:PackIcon Kind="ChartBar" Height="25" Width="25" Margin="10"/>
-                        <TextBlock Text="Báo cáo" VerticalAlignment="Center"  Margin="20 10" HorizontalAlignment="Left"
-                                   FontSize="18" FontWeight="Bold"/>
-                    </StackPanel>
-                </ListViewItem>
-                <ListViewItem x:Name="ItemRegulation" Height="60">
-                    <StackPanel Orientation="Horizontal">
-                        <materialDesign:PackIcon Kind="Settings" Height="25" Width="25" Margin="10"/>
-                        <TextBlock Text="Quy định" VerticalAlignment="Center"  Margin="20 10" HorizontalAlignment="Left"
-                                   FontSize="18" FontWeight="Bold"/>
-                    </StackPanel>
-                </ListViewItem>
                 <ListViewItem x:Name="ItemStaff" Height="60" IsEnabled="{Binding CanChangePermission}">
                     <StackPanel Orientation="Horizontal">
                         <materialDesign:PackIcon Kind="PersonBadge" Height="25" Width="25" Margin="10"/>

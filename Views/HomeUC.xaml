@@ -38,16 +38,6 @@
                     <materialDesign:PackIcon Kind="History" Grid.Column="0" Width="Auto" Height="Auto"/>
                 </Grid>
             </Button>
-            <Button Click="ButtonCollectFine_Click" Grid.Column="1" Grid.Row="2" Height="80" Width="280" Background="#FFE6001F" BorderBrush="{x:Null}"  Margin="0 -50 0 0" HorizontalContentAlignment="Left">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="1*"/>
-                        <ColumnDefinition Width="2*"/>
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Column="1" Text="Thu tiền phạt" VerticalAlignment="Center" FontSize="22" FontWeight="Bold" Margin="10"/>
-                    <materialDesign:PackIcon Kind="CloseOctagonOutline" Grid.Column="0" Width="Auto" Height="Auto"/>
-                </Grid>
-            </Button>
         </Grid>
     </Grid>
 </UserControl>

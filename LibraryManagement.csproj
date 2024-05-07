@@ -155,6 +155,7 @@
     <Compile Include="ViewModels\CategoryViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\ReturnBookViewModel.cs" />
+    <Compile Include="ViewModels\UserViewModel.cs" />
     <Compile Include="Views\AddAuthorWindow.xaml.cs">
       <DependentUpon>AddAuthorWindow.xaml</DependentUpon>
     </Compile>
@@ -163,6 +164,9 @@
     </Compile>
     <Compile Include="Views\AddCategoryWindow.xaml.cs">
       <DependentUpon>AddCategoryWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddUserWindow.xaml.cs">
+      <DependentUpon>AddUserWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\AuthorWindow.xaml.cs">
       <DependentUpon>AuthorWindow.xaml</DependentUpon>
@@ -188,6 +192,9 @@
     <Compile Include="Views\ReturnBookWindow.xaml.cs">
       <DependentUpon>ReturnBookWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\UserUC.xaml.cs">
+      <DependentUpon>UserUC.xaml</DependentUpon>
+    </Compile>
     <Page Include="DataContextDictionary.xaml" />
     <Page Include="LoginWindow.xaml" />
     <Page Include="MainWindow.xaml">
@@ -205,6 +212,7 @@
     <Page Include="Views\AddAuthorWindow.xaml" />
     <Page Include="Views\AddBookWindow.xaml" />
     <Page Include="Views\AddCategoryWindow.xaml" />
+    <Page Include="Views\AddUserWindow.xaml" />
     <Page Include="Views\AuthorWindow.xaml" />
     <Page Include="Views\BookUC.xaml" />
     <Page Include="Views\BorrowBookWindow.xaml" />
@@ -213,6 +221,7 @@
     <Page Include="Views\CollectFineWindow.xaml" />
     <Page Include="Views\HomeUC.xaml" />
     <Page Include="Views\ReturnBookWindow.xaml" />
+    <Page Include="Views\UserUC.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\DataSingleton.cs" />
