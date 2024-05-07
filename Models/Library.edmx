@@ -10,23 +10,21 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="name" Type="varchar" MaxLength="255" />
+          <Property Name="name" Type="nvarchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="Book">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="title" Type="varchar" MaxLength="255" />
+          <Property Name="title" Type="nvarchar" MaxLength="255" />
           <Property Name="price" Type="decimal" Precision="19" Scale="2" />
-          <Property Name="image" Type="varchar" MaxLength="255" />
+          <Property Name="image" Type="nvarchar" MaxLength="255" />
           <Property Name="manufacture_date" Type="datetime2" Precision="6" />
           <Property Name="added_date" Type="datetime2" Precision="6" />
-          <Property Name="status" Type="varchar" MaxLength="255" />
+          <Property Name="status" Type="nvarchar" MaxLength="255" />
           <Property Name="publisher_id" Type="bigint" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'library.dbo.Book_Author' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Book_Author">
           <Key>
             <PropertyRef Name="book_id" />
@@ -35,8 +33,6 @@ warning 6002: The table/view 'library.dbo.Book_Author' does not have a primary k
           <Property Name="book_id" Type="bigint" Nullable="false" />
           <Property Name="author_id" Type="bigint" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'library.dbo.Book_Category' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Book_Category">
           <Key>
             <PropertyRef Name="book_id" />
@@ -54,14 +50,14 @@ warning 6002: The table/view 'library.dbo.Book_Category' does not have a primary
           <Property Name="reader_id" Type="bigint" />
           <Property Name="borrow_date" Type="datetime2" Precision="6" />
           <Property Name="return_date" Type="datetime2" Precision="6" />
-          <Property Name="status" Type="varchar" MaxLength="255" />
+          <Property Name="status" Type="nvarchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="Category">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="name" Type="varchar" MaxLength="255" />
+          <Property Name="name" Type="nvarchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="Payment">
           <Key>
@@ -77,23 +73,23 @@ warning 6002: The table/view 'library.dbo.Book_Category' does not have a primary
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="name" Type="varchar" MaxLength="255" />
+          <Property Name="name" Type="nvarchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="Publisher">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="name" Type="varchar" MaxLength="255" />
+          <Property Name="name" Type="nvarchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="Reader">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="name" Type="varchar" MaxLength="255" />
+          <Property Name="name" Type="nvarchar" MaxLength="255" />
           <Property Name="dob" Type="datetime2" Precision="6" />
-          <Property Name="email" Type="varchar" MaxLength="255" />
+          <Property Name="email" Type="nvarchar" MaxLength="255" />
           <Property Name="debt" Type="decimal" Precision="19" Scale="2" />
           <Property Name="reader_type_id" Type="bigint" />
           <Property Name="created_date" Type="datetime2" Precision="6" />
@@ -104,17 +100,15 @@ warning 6002: The table/view 'library.dbo.Book_Category' does not have a primary
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="name" Type="varchar" MaxLength="255" />
+          <Property Name="name" Type="nvarchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="Roles">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="name" Type="varchar" MaxLength="255" />
+          <Property Name="name" Type="nvarchar" MaxLength="255" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'library.dbo.Roles_Privileges' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Roles_Privileges">
           <Key>
             <PropertyRef Name="role_id" />
@@ -130,14 +124,12 @@ warning 6002: The table/view 'library.dbo.Roles_Privileges' does not have a prim
           <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="created_date" Type="datetime2" Precision="6" />
           <Property Name="updated_date" Type="datetime2" Precision="6" />
-          <Property Name="birthday" Type="varchar" MaxLength="255" />
-          <Property Name="email" Type="varchar" MaxLength="255" />
-          <Property Name="name" Type="varchar" MaxLength="255" />
-          <Property Name="password" Type="varchar" MaxLength="255" />
-          <Property Name="username" Type="varchar" MaxLength="255" />
+          <Property Name="birthday" Type="nvarchar" MaxLength="255" />
+          <Property Name="email" Type="nvarchar" MaxLength="255" />
+          <Property Name="name" Type="nvarchar" MaxLength="255" />
+          <Property Name="password" Type="nvarchar" MaxLength="255" />
+          <Property Name="username" Type="nvarchar" MaxLength="255" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'library.dbo.Users_Roles' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Users_Roles">
           <Key>
             <PropertyRef Name="user_id" />
@@ -305,6 +297,8 @@ warning 6002: The table/view 'library.dbo.Users_Roles' does not have a primary k
         <EntityContainer Name="libraryModelStoreContainer">
           <EntitySet Name="Author" EntityType="Self.Author" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Book" EntityType="Self.Book" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Book_Author" EntityType="Self.Book_Author" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Book_Category" EntityType="Self.Book_Category" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="BookReader" EntityType="Self.BookReader" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Payment" EntityType="Self.Payment" Schema="dbo" store:Type="Tables" />
@@ -313,31 +307,9 @@ warning 6002: The table/view 'library.dbo.Users_Roles' does not have a primary k
           <EntitySet Name="Reader" EntityType="Self.Reader" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ReaderType" EntityType="Self.ReaderType" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Roles_Privileges" EntityType="Self.Roles_Privileges" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Book_Author" EntityType="Self.Book_Author" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [Book_Author].[book_id] AS [book_id], 
-    [Book_Author].[author_id] AS [author_id]
-    FROM [dbo].[Book_Author] AS [Book_Author]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="Book_Category" EntityType="Self.Book_Category" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [Book_Category].[book_id] AS [book_id], 
-    [Book_Category].[category_id] AS [category_id]
-    FROM [dbo].[Book_Category] AS [Book_Category]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="Roles_Privileges" EntityType="Self.Roles_Privileges" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [Roles_Privileges].[role_id] AS [role_id], 
-    [Roles_Privileges].[privilege_id] AS [privilege_id]
-    FROM [dbo].[Roles_Privileges] AS [Roles_Privileges]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="Users_Roles" EntityType="Self.Users_Roles" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [Users_Roles].[user_id] AS [user_id], 
-    [Users_Roles].[role_id] AS [role_id]
-    FROM [dbo].[Users_Roles] AS [Users_Roles]</DefiningQuery>
-          </EntitySet>
+          <EntitySet Name="Users_Roles" EntityType="Self.Users_Roles" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Book_Author_author_id" Association="Self.FK_Book_Author_author_id">
             <End Role="Author" EntitySet="Author" />
             <End Role="Book_Author" EntitySet="Book_Author" />
@@ -401,7 +373,7 @@ warning 6002: The table/view 'library.dbo.Users_Roles' does not have a primary k
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Books" Relationship="Self.Book_Author" FromRole="Author" ToRole="Book" />
         </EntityType>
         <EntityType Name="Book">
@@ -409,12 +381,12 @@ warning 6002: The table/view 'library.dbo.Users_Roles' does not have a primary k
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="price" Type="Decimal" Precision="19" Scale="2" />
-          <Property Name="image" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="image" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="manufacture_date" Type="DateTime" Precision="6" />
           <Property Name="added_date" Type="DateTime" Precision="6" />
-          <Property Name="status" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="status" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="publisher_id" Type="Int64" />
           <NavigationProperty Name="Publisher" Relationship="Self.FK_Book_publisher_id" FromRole="Book" ToRole="Publisher" />
           <NavigationProperty Name="BookReaders" Relationship="Self.FK_BookReader_book_id" FromRole="Book" ToRole="BookReader" />
@@ -430,7 +402,7 @@ warning 6002: The table/view 'library.dbo.Users_Roles' does not have a primary k
           <Property Name="reader_id" Type="Int64" />
           <Property Name="borrow_date" Type="DateTime" Precision="6" />
           <Property Name="return_date" Type="DateTime" Precision="6" />
-          <Property Name="status" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="status" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Book" Relationship="Self.FK_BookReader_book_id" FromRole="BookReader" ToRole="Book" />
           <NavigationProperty Name="Reader" Relationship="Self.FK_BookReader_reader_id" FromRole="BookReader" ToRole="Reader" />
         </EntityType>
@@ -439,7 +411,7 @@ warning 6002: The table/view 'library.dbo.Users_Roles' does not have a primary k
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Books" Relationship="Self.Book_Category" FromRole="Category" ToRole="Book" />
         </EntityType>
         <EntityType Name="Payment">
@@ -457,7 +429,7 @@ warning 6002: The table/view 'library.dbo.Users_Roles' does not have a primary k
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Roles" Relationship="Self.Roles_Privileges" FromRole="Privileges" ToRole="Roles" />
         </EntityType>
         <EntityType Name="Publisher">
@@ -465,7 +437,7 @@ warning 6002: The table/view 'library.dbo.Users_Roles' does not have a primary k
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Books" Relationship="Self.FK_Book_publisher_id" FromRole="Publisher" ToRole="Book" />
         </EntityType>
         <EntityType Name="Reader">
@@ -473,9 +445,9 @@ warning 6002: The table/view 'library.dbo.Users_Roles' does not have a primary k
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="dob" Type="DateTime" Precision="6" />
-          <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="debt" Type="Decimal" Precision="19" Scale="2" />
           <Property Name="reader_type_id" Type="Int64" />
           <Property Name="created_date" Type="DateTime" Precision="6" />
@@ -489,7 +461,7 @@ warning 6002: The table/view 'library.dbo.Users_Roles' does not have a primary k
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Readers" Relationship="Self.FK_Reader_reader_type_id" FromRole="ReaderType" ToRole="Reader" />
         </EntityType>
         <EntityType Name="Role">
@@ -497,7 +469,7 @@ warning 6002: The table/view 'library.dbo.Users_Roles' does not have a primary k
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Privileges" Relationship="Self.Roles_Privileges" FromRole="Roles" ToRole="Privileges" />
           <NavigationProperty Name="Users" Relationship="Self.Users_Roles" FromRole="Roles" ToRole="Users" />
         </EntityType>
@@ -508,11 +480,11 @@ warning 6002: The table/view 'library.dbo.Users_Roles' does not have a primary k
           <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="created_date" Type="DateTime" Precision="6" />
           <Property Name="updated_date" Type="DateTime" Precision="6" />
-          <Property Name="birthday" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Name="password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Name="username" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="birthday" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="username" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Roles" Relationship="Self.Users_Roles" FromRole="Users" ToRole="Roles" />
         </EntityType>
         <Association Name="FK_Book_publisher_id">
@@ -591,7 +563,7 @@ warning 6002: The table/view 'library.dbo.Users_Roles' does not have a primary k
           <End Role="Roles" Type="Self.Role" Multiplicity="*" />
           <End Role="Users" Type="Self.User" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="libraryEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="libraryEntities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Authors" EntityType="Self.Author" />
           <EntitySet Name="Books" EntityType="Self.Book" />
           <EntitySet Name="BookReaders" EntityType="Self.BookReader" />
@@ -645,7 +617,7 @@ warning 6002: The table/view 'library.dbo.Users_Roles' does not have a primary k
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="libraryModelStoreContainer" CdmEntityContainer="libraryEntities1">
+        <EntityContainerMapping StorageEntityContainer="libraryModelStoreContainer" CdmEntityContainer="libraryEntities3">
           <EntitySetMapping Name="Authors">
             <EntityTypeMapping TypeName="libraryModel.Author">
               <MappingFragment StoreEntitySet="Author">

@@ -78,65 +78,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="LoginScreen.xaml.cs">
-      <DependentUpon>LoginScreen.xaml</DependentUpon>
+    <Compile Include="LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Utils\BindingProxy.cs" />
-    <Compile Include="Utils\CommonUtils.cs" />
-    <Compile Include="Utils\Converter\ImageToSource.cs" />
-    <Compile Include="Utils\Validations\InfoValidations\ComfirmPasswordValidation.cs" />
-    <Compile Include="Utils\Validations\InfoValidations\PasswordValidation.cs" />
-    <Compile Include="Utils\Validations\InfoValidations\PhoneNumerValidation.cs" />
-    <Compile Include="Utils\Validations\InfoValidations\UserNameValidation.cs" />
-    <Compile Include="Utils\Validations\LoginValidations\PasswordLoginValidation.cs" />
-    <Compile Include="Utils\Validations\LoginValidations\UserNameLoginValidation.cs" />
-    <Compile Include="ViewModels\BaseViewModel.cs" />
-    <Compile Include="ViewModels\BookViewModel.cs" />
-    <Compile Include="ViewModels\LoginViewModel.cs" />
-    <Compile Include="Views\AuthorWindow.xaml.cs">
-      <DependentUpon>AuthorWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\BorrowBookWindow.xaml.cs">
-      <DependentUpon>BorrowBookWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\CategoryWindow.xaml.cs">
-      <DependentUpon>CategoryWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ChangePasswordWindow.xaml.cs">
-      <DependentUpon>ChangePasswordWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\CollectFineWindow.xaml.cs">
-      <DependentUpon>CollectFineWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\HomeUC.xaml.cs">
-      <DependentUpon>HomeUC.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ReturnBookWindow.xaml.cs">
-      <DependentUpon>ReturnBookWindow.xaml</DependentUpon>
-    </Compile>
-    <Page Include="DataContextDictionary.xaml" />
-    <Page Include="LoginScreen.xaml" />
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Page Include="Views\AuthorWindow.xaml" />
-    <Page Include="Views\BorrowBookWindow.xaml" />
-    <Page Include="Views\CategoryWindow.xaml" />
-    <Page Include="Views\ChangePasswordWindow.xaml" />
-    <Page Include="Views\CollectFineWindow.xaml" />
-    <Page Include="Views\HomeUC.xaml" />
-    <Page Include="Views\ReturnBookWindow.xaml" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Models\Author.cs">
       <DependentUpon>Library.tt</DependentUpon>
     </Compile>
@@ -149,7 +93,6 @@
     <Compile Include="Models\Category.cs">
       <DependentUpon>Library.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\DataSingleton.cs" />
     <Compile Include="Models\Library.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -186,6 +129,80 @@
     <Compile Include="Models\User.cs">
       <DependentUpon>Library.tt</DependentUpon>
     </Compile>
+    <Compile Include="Utils\BindingProxy.cs" />
+    <Compile Include="Utils\CommonUtils.cs" />
+    <Compile Include="Utils\Converter\BindingValueConverters.cs" />
+    <Compile Include="Utils\Paginations\BookPaginatingCollection.cs" />
+    <Compile Include="Utils\Paginations\LatestBookPaginationCollection.cs" />
+    <Compile Include="Utils\Paginations\PaginatingCollection.cs" />
+    <Compile Include="Utils\Validations\Book\AuthorNameValidation.cs" />
+    <Compile Include="Utils\Validations\Book\AuthorValidation.cs" />
+    <Compile Include="Utils\Validations\Book\BookNameValidation.cs" />
+    <Compile Include="Utils\Validations\Book\CategoryNameValidation.cs" />
+    <Compile Include="Utils\Validations\Book\CategoryValidation.cs" />
+    <Compile Include="Utils\Validations\Book\PriceValidation.cs" />
+    <Compile Include="Utils\Validations\Info\ComfirmPasswordValidation.cs" />
+    <Compile Include="Utils\Validations\Info\PasswordValidation.cs" />
+    <Compile Include="Utils\Validations\Info\PhoneNumerValidation.cs" />
+    <Compile Include="Utils\Validations\Info\UserNameValidation.cs" />
+    <Compile Include="Utils\Validations\Login\PasswordLoginValidation.cs" />
+    <Compile Include="Utils\Validations\Login\UserNameLoginValidation.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\BookViewModel.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="Views\AddBookWindow.xaml.cs">
+      <DependentUpon>AddBookWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AuthorWindow.xaml.cs">
+      <DependentUpon>AuthorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BookUC.xaml.cs">
+      <DependentUpon>BookUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BorrowBookWindow.xaml.cs">
+      <DependentUpon>BorrowBookWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CategoryWindow.xaml.cs">
+      <DependentUpon>CategoryWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ChangePasswordWindow.xaml.cs">
+      <DependentUpon>ChangePasswordWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CollectFineWindow.xaml.cs">
+      <DependentUpon>CollectFineWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HomeUC.xaml.cs">
+      <DependentUpon>HomeUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ReturnBookWindow.xaml.cs">
+      <DependentUpon>ReturnBookWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="DataContextDictionary.xaml" />
+    <Page Include="LoginWindow.xaml" />
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Views\AddBookWindow.xaml" />
+    <Page Include="Views\AuthorWindow.xaml" />
+    <Page Include="Views\BookUC.xaml" />
+    <Page Include="Views\BorrowBookWindow.xaml" />
+    <Page Include="Views\CategoryWindow.xaml" />
+    <Page Include="Views\ChangePasswordWindow.xaml" />
+    <Page Include="Views\CollectFineWindow.xaml" />
+    <Page Include="Views\HomeUC.xaml" />
+    <Page Include="Views\ReturnBookWindow.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\DataSingleton.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -221,16 +238,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Models\Library.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Library.edmx</DependentUpon>
-      <LastGenOutput>Library.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\Library.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Library.edmx</DependentUpon>
-      <LastGenOutput>Library.cs</LastGenOutput>
-    </Content>
     <None Include="Resources\logout.png" />
     <None Include="Resources\member.png" />
     <None Include="Resources\minimize.png" />
@@ -248,6 +255,17 @@
     <None Include="Resources\icon.png" />
     <None Include="Resources\import-new.png" />
     <None Include="Resources\import-old.png" />
+    <Content Include="Models\Library.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Library.edmx</DependentUpon>
+      <LastGenOutput>Library.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Library.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Library.edmx</DependentUpon>
+      <LastGenOutput>Library.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\add_categories_authors_publisher.sql" />
     <Content Include="Scripts\add_data.sql" />
     <Content Include="Scripts\create_tables.sql" />
   </ItemGroup>

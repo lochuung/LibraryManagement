@@ -118,7 +118,7 @@ namespace LibraryManagement
                     break;
                 case "ItemBook":
                     this.lbTitle.Content = "SÁCH";
-                    // urc = new BookScreen();
+                    urc = new BookUC();
                     gridForContent.Children.Add(urc);
                     HideNavigation();
                     break;

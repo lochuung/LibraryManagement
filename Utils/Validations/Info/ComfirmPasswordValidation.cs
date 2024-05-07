@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace LibraryManagement.Utils.Validations.InfoValidations
+namespace LibraryManagement.Utils.Validations.Info
 {
     public class ComfirmPasswordValidationWrapper : DependencyObject
     {

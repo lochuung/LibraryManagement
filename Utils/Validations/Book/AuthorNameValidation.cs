@@ -6,17 +6,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 
-namespace LibraryManagement.Utils.Validations.LoginValidations
+namespace LibraryManagement.Utils.Validations.Book
 {
-    public class PasswordLoginValidation : ValidationRule
+    public class AuthorNameValidation : ValidationRule
     {
+        public AuthorNameValidation()
+        {
+        }
+
         public override ValidationResult Validate(object value, CultureInfo cultureInfo)
         {
-            string password = (string)value;
-            if (value == null || password == "")
-            {
-                return new ValidationResult(false, "Vui lòng nhập mật khẩu");
-            }
+            if (value == null || ((string)value).Trim().Length == 0)
+                return new ValidationResult(false, "Vui lòng nhập nhập tên tác giả mới");
             return ValidationResult.ValidResult;
         }
     }

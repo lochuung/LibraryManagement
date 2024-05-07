@@ -7,7 +7,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 
-namespace LibraryManagement.Utils.Validations.InfoValidations
+namespace LibraryManagement.Utils.Validations.Info
 {
     public class PhoneNumberValidation : ValidationRule
     {

@@ -25,17 +25,5 @@ namespace LibraryManagement.Views
             Window window = new CollectFineWindow();
             window.ShowDialog();
         }
-
-        private void ButtonAuthor_Click(object sender, RoutedEventArgs e)
-        {
-            Window window = new AuthorWindow();
-            window.ShowDialog();
-        }
-
-        private void ButtonCategory_Click(object sender, RoutedEventArgs e)
-        {
-            Window window = new CategoryWindow();
-            window.ShowDialog();
-        }
     }
 }

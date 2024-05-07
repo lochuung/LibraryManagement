@@ -4,9 +4,9 @@ using static LibraryManagement.Utils.CommonUtils;
 
 namespace LibraryManagement
 {
-    public partial class LoginScreen : Window
+    public partial class LoginWindow : Window
     {
-        public LoginScreen()
+        public LoginWindow()
         {
             InitializeComponent();
             this.Icon = ConvertHBitmapSource(Properties.Resources.icon);

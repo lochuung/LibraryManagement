@@ -15,10 +15,10 @@ namespace LibraryManagement.Models
                 instance = value;
             }
         }
-        public LibraryEntities DB { get; set; }
+        public libraryEntities3 DB { get; set; }
         private DataSingleton()
         {
-            DB = new LibraryEntities();
+            DB = new libraryEntities3();
         }
     }
 }
