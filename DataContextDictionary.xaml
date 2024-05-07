@@ -7,6 +7,7 @@
     <viewmodel:CategoryViewModel x:Key="CategoryViewModel" />
     <viewmodel:AuthorViewModel x:Key="AuthorViewModel" />
     <viewmodel:BorrowBookViewModel x:Key="BorrowBookViewModel" />
+    <viewmodel:ReturnBookViewModel x:Key="ReturnBookViewModel" />
     <viewmodel:SelectedItemToBoolean x:Key="SelectedItemToBoolean"/>
     
     <!-- Value Converter -->

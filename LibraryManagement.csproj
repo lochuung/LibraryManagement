@@ -154,6 +154,7 @@
     <Compile Include="ViewModels\BorrowBookViewModel.cs" />
     <Compile Include="ViewModels\CategoryViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\ReturnBookViewModel.cs" />
     <Compile Include="Views\AddAuthorWindow.xaml.cs">
       <DependentUpon>AddAuthorWindow.xaml</DependentUpon>
     </Compile>
