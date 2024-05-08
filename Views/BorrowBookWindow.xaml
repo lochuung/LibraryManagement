@@ -47,7 +47,6 @@
                             <DataGridTextColumn Header="Loại độc giả" Binding="{Binding ReaderType.name}"/>
                             <DataGridTextColumn Header="Email" Binding="{Binding email}"/>
                             <DataGridTextColumn Header="Ngày tạo" Binding="{Binding created_date}"/>
-                            <DataGridTextColumn Header="Nợ" Binding="{Binding debt}"/>
                         </DataGrid.Columns>
                     </DataGrid>
                 </ScrollViewer>
@@ -155,9 +154,6 @@
                             <Grid Grid.Row="3" Grid.Column="0">
                                 <TextBlock Foreground="Black" VerticalAlignment="Center"   HorizontalAlignment="Left"  Padding="10" Text="Loại độc giả" Grid.ColumnSpan="2"/>
                             </Grid>
-                            <Grid Grid.Row="4" Grid.Column="0">
-                                <TextBlock Foreground="Black"  VerticalAlignment="Center"    HorizontalAlignment="Left" Padding="10" Text="Số nợ" Grid.ColumnSpan="2"/>
-                            </Grid>
                             <Grid Grid.Row="0" Grid.Column="1">
                                 <TextBox  Foreground="Black" BorderThickness="1" Margin="8"  TextAlignment="Left" Text="{Binding ReaderSelected.id}" >
                                     <TextBox.Resources>
@@ -187,15 +183,6 @@
                             </Grid>
                             <Grid Grid.Row="3" Grid.Column="1">
                                 <TextBox Foreground="Black" BorderThickness="1" Margin="8" Text="{Binding ReaderSelected.ReaderType.name}">
-                                    <TextBox.Resources>
-                                        <Style TargetType="{x:Type Border}">
-                                            <Setter Property="CornerRadius" Value="10"/>
-                                        </Style>
-                                    </TextBox.Resources>
-                                </TextBox>
-                            </Grid>
-                            <Grid Grid.Row="4" Grid.Column="1">
-                                <TextBox  Foreground="Black" BorderThickness="1" Margin="8"  Text="{Binding ReaderSelected.debt}">
                                     <TextBox.Resources>
                                         <Style TargetType="{x:Type Border}">
                                             <Setter Property="CornerRadius" Value="10"/>

@@ -41,7 +41,6 @@
                             <DataGridTextColumn Header="Loại độc giả" Binding="{Binding ReaderType.name}"/>
                             <DataGridTextColumn Header="Email" Binding="{Binding email}"/>
                             <DataGridTextColumn Header="Ngày tạo" Binding="{Binding created_date}"/>
-                            <DataGridTextColumn Header="Nợ" Binding="{Binding debt}"/>
                         </DataGrid.Columns>
 
                     </DataGrid>
@@ -151,11 +150,7 @@
                     HorizontalAlignment="Stretch"
                     Padding="10"
                     Grid.Row="1" Grid.Column="2" Content="Tiền phạt kỳ này"/>
-                            <Label Foreground="Black"
-                    VerticalAlignment="Stretch" 
-                    HorizontalAlignment="Stretch"
-                    Padding="10"
-                    Grid.Row="2" Grid.Column="2" Content="Tổng nợ"/>
+                           
                             <!-- Data -->
                             <TextBox  Foreground="Black"
                     VerticalAlignment="Stretch" 
@@ -197,17 +192,6 @@
                    Margin="10" BorderThickness="1"
                     TextAlignment="Left" IsReadOnly="True" VerticalContentAlignment="Center"
                     Grid.Row="1" Grid.Column="3" Text="{Binding BookReader.Reader.debt}">
-                                <TextBox.Resources>
-                                    <Style TargetType="{x:Type Border}">
-                                        <Setter Property="CornerRadius" Value="10"/>
-                                    </Style>
-                                </TextBox.Resources>
-                            </TextBox>
-                            <TextBox 
-                    VerticalAlignment="Stretch" 
-                    HorizontalAlignment="Stretch" Margin="10" BorderThickness="1"
-                    TextAlignment="Left" IsReadOnly="True" VerticalContentAlignment="Center"
-                    Grid.Row="2" Grid.Column="3" Text="{Binding BookReader.Reader.debt, NotifyOnTargetUpdated=True, NotifyOnSourceUpdated=True}">
                                 <TextBox.Resources>
                                     <Style TargetType="{x:Type Border}">
                                         <Setter Property="CornerRadius" Value="10"/>

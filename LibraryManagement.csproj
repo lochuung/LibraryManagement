@@ -154,6 +154,7 @@
     <Compile Include="ViewModels\BorrowBookViewModel.cs" />
     <Compile Include="ViewModels\CategoryViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\ReaderViewModel.cs" />
     <Compile Include="ViewModels\ReturnBookViewModel.cs" />
     <Compile Include="ViewModels\UserViewModel.cs" />
     <Compile Include="Views\AddAuthorWindow.xaml.cs">
@@ -164,6 +165,12 @@
     </Compile>
     <Compile Include="Views\AddCategoryWindow.xaml.cs">
       <DependentUpon>AddCategoryWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddReaderTypeWindow.xaml.cs">
+      <DependentUpon>AddReaderTypeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddReaderWindow.xaml.cs">
+      <DependentUpon>AddReaderWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\AddUserWindow.xaml.cs">
       <DependentUpon>AddUserWindow.xaml</DependentUpon>
@@ -189,6 +196,12 @@
     <Compile Include="Views\HomeUC.xaml.cs">
       <DependentUpon>HomeUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ReaderTypeWindow.xaml.cs">
+      <DependentUpon>ReaderTypeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ReaderUC.xaml.cs">
+      <DependentUpon>ReaderUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ReturnBookWindow.xaml.cs">
       <DependentUpon>ReturnBookWindow.xaml</DependentUpon>
     </Compile>
@@ -212,6 +225,8 @@
     <Page Include="Views\AddAuthorWindow.xaml" />
     <Page Include="Views\AddBookWindow.xaml" />
     <Page Include="Views\AddCategoryWindow.xaml" />
+    <Page Include="Views\AddReaderTypeWindow.xaml" />
+    <Page Include="Views\AddReaderWindow.xaml" />
     <Page Include="Views\AddUserWindow.xaml" />
     <Page Include="Views\AuthorWindow.xaml" />
     <Page Include="Views\BookUC.xaml" />
@@ -220,6 +235,8 @@
     <Page Include="Views\ChangePasswordWindow.xaml" />
     <Page Include="Views\CollectFineWindow.xaml" />
     <Page Include="Views\HomeUC.xaml" />
+    <Page Include="Views\ReaderTypeWindow.xaml" />
+    <Page Include="Views\ReaderUC.xaml" />
     <Page Include="Views\ReturnBookWindow.xaml" />
     <Page Include="Views\UserUC.xaml" />
   </ItemGroup>

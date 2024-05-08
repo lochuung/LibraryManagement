@@ -9,6 +9,7 @@
     <viewmodel:BorrowBookViewModel x:Key="BorrowBookViewModel" />
     <viewmodel:ReturnBookViewModel x:Key="ReturnBookViewModel" />
     <viewmodel:UserViewModel x:Key="UserViewModel" />
+    <viewmodel:ReaderViewModel x:Key="ReaderViewModel" />
     <viewmodel:SelectedItemToBoolean x:Key="SelectedItemToBoolean"/>
     
     <!-- Value Converter -->

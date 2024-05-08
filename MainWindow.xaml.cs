@@ -112,7 +112,7 @@ namespace LibraryManagement
                     break;
                 case "ItemMember":
                     this.lbTitle.Content = "ĐỘC GIẢ";
-                    // urc = new ReaderScreen();
+                    urc = new ReaderUC();
                     gridForContent.Children.Add(urc);
                     HideNavigation();
                     break;
